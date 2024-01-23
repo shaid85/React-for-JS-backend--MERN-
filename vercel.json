@@ -1,8 +1,8 @@
 {
     "rewrites": [
         { 
-            "source": "/proxy/:match*", 
-            "destination": "https://js-backend-api.onrender.com/:match*" 
+            "source": "/api/:path*", 
+            "destination": "https://js-backend-api.onrender.com/api/:path*"
         },
         {
             "source": "/(.*)",
