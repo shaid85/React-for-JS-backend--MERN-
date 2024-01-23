@@ -20,9 +20,9 @@ function Login() {
     setError("")
       try {
         setLoading(true);
-        const session = await axios.post("/api/v1/users/login/", data)
+        const session = await axios.post("https://js-backend-api.onrender.com/api/v1/users/login/", data)
         if(session){
-          const response = await axios.get("/api/v1/users/currentuser/")
+          const response = await axios.get("https://js-backend-api.onrender.com/api/v1/users/currentuser/")
           if(response){
             const userData = response.data.data
             dispatch(login({userData}))
