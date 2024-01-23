@@ -10,24 +10,34 @@ function Layout() {
   const [loading, setLoading] = useState(true)
   const dispatch = useDispatch()
 
-  const getuserDetails = async () => {
-     try {
-        const response = await axios.get("/api/v1/users/currentuser/")
-        if(response){
-          const userData = response.data.data
-          dispatch(login({userData}))
-        }else{
-          dispatch(logout())
-        }
-     } catch (error) {
-        console.log(error);
-     } finally {
-        setLoading(false);
-     }
-  }
+  // const getuserDetails = async () => {
+  //    try {
+  //       const response = await axios.get("/api/v1/users/currentuser/")
+  //       if(response){
+  //         const userData = response.data.data
+  //         dispatch(login({userData}))
+  //       }else{
+  //         dispatch(logout())
+  //       }
+  //    } catch (error) {
+  //       console.log(error);
+  //    } finally {
+  //       setLoading(false);
+  //    }
+  // }
   
 useEffect(() => {
-  getuserDetails()
+  axios.get("/api/v1/users/currentuser/")
+    .then((response) => {
+      const userData = response.data.data
+      console.log(userData);
+      dispatch(login({userData}))
+    }).catch((error) => {
+      console.log(error);
+      dispatch(logout())
+    }).finally(
+      setLoading(false)
+    )
 
 }, [])
 
