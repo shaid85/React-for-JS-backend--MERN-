@@ -1,8 +1,12 @@
 {
     "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/"
-      }
+        {
+            "source": "/api/(.*)",
+            "destination": "https://js-backend-api.onrender.com"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/"
+        }
     ]
-  }
+}
