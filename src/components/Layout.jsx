@@ -31,10 +31,13 @@ useEffect(() => {
     .then((response) => {
       const userData = response.data.data
       console.log(response);
-      dispatch(login({userData}))
+      if(userData){
+        dispatch(login({userData}))
+      }else{
+        dispatch(logout())
+      }
     }).catch((error) => {
       console.log(error);
-      dispatch(logout())
     }).finally(
       setLoading(false)
     )
