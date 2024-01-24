@@ -30,7 +30,7 @@ useEffect(() => {
   axios.get("/api/v1/users/currentuser/")
     .then((response) => {
       const userData = response.data.data
-      console.log(userData);
+      console.log(response);
       dispatch(login({userData}))
     }).catch((error) => {
       console.log(error);
