@@ -12,7 +12,7 @@ function Layout() {
 
   // const getuserDetails = async () => {
   //    try {
-  //       const response = await axios.get("/api/v1/users/currentuser/")
+  //       const response = await axios.get("https://js-backend-api.onrender.com/api/v1/users/currentuser/")
   //       if(response){
   //         const userData = response.data.data
   //         dispatch(login({userData}))
