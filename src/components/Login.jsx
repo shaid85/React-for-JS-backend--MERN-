@@ -6,7 +6,7 @@ import Button from './Button';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import {useDispatch} from 'react-redux'
-import {login} from '../store/authSlice';
+import {login,logout} from '../store/authSlice';
 
 function Login() {
   const [error, setError] = useState('')
