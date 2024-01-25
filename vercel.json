@@ -1,9 +1,6 @@
 {
     "rewrites": [
-        //{ 
-        //    "source": "/api/:path*", 
-        //    "destination": "https://js-backend-api.onrender.com/api/:path*"
-       // },
+
         {
             "source": "/(.*)",
             "destination": "/index.html"
