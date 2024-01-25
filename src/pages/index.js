@@ -3,6 +3,10 @@ import Home from "./Home"
 import Login from "./Login"
 import Signup from "./Signup"
 import Profile from "./Profile"
+import UserDetails from "./UserDetails"
+import Passwordupdate from "./Passwordupdate"
+
+
 
 export {
     About,
@@ -10,4 +14,6 @@ export {
     Login,
     Signup,
     Profile,
+    UserDetails,
+    Passwordupdate,
 }

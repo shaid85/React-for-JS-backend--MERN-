@@ -8,6 +8,8 @@ import Login from "./Login"
 import Select from "./Select"
 import Signup from "./Signup"
 import Logout from "./Logout"
+import Avatarupdate from "./Avatarupdate"
+import Coverupdate from "./Coverupdate"
 
 export {
     Header,
@@ -20,5 +22,6 @@ export {
     Login,
     Signup,
     Logout,
-    
+    Avatarupdate,
+    Coverupdate
 }
