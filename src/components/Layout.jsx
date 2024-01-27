@@ -27,7 +27,7 @@ function Layout() {
   // }
   
 useEffect(() => {
-  axios.get("https://js-backend-api.onrender.com/api/v1/users/currentuser/")
+  axios.get("/api/v1/users/currentuser/")
     .then((response) => {
       const userData = response.data.data
       console.log(response);

@@ -17,10 +17,10 @@ console.log(userData);
     }
 
     const showAvatar =() =>  {
-        setShow(true)
+        setShow(prev => !prev)
     }
     const showCover =() =>  {
-        setShowcover(true)
+        setShowcover(prev => !prev)
     }
   return (
     <>
